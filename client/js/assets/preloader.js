@@ -3,7 +3,7 @@
  */
 
 define(['lib/howler', 'lib/pixi'],
-    function (__howler__, PIXI) {
+    function (Howler, PIXI) {
 
         var Preloader = Class.extend({
             init: function (assetManager) {
@@ -14,8 +14,8 @@ define(['lib/howler', 'lib/pixi'],
 
             _loadSounds: function () {
                 for (var i = 1; i < 212; i++) { // <-- todo numero hardcodeado!
-                    if (!this.assetManager.sounds[i]) {
-                        this.assetManager.sounds[i] = new Howl({
+                    if (!this.assetManager.audio.sounds[i]) {
+                        this.assetManager.audio.sounds[i] = new Howl({
                             urls: ['audio/sonidos/' + i + '.m4a']
                         })
                     }
@@ -26,8 +26,8 @@ define(['lib/howler', 'lib/pixi'],
 
             copiarLoadedAssets: function (resources, baseTextures, mapas) {
                 for (var res in resources) {
-                    if (res.slice(0,4) === "mapa"){
-                        var numero = res.slice(4,res.length);
+                    if (res.slice(0, 4) === "mapa") {
+                        var numero = res.slice(4, res.length);
                         mapas[parseInt(numero)] = resources[res].data;
                     }
                     else { //numero, es un grafico
@@ -53,7 +53,7 @@ define(['lib/howler', 'lib/pixi'],
             },
 
             _agregarPreloadMapas: function (loader) { // TODO: comprimir los mapas con http://pieroxy.net/blog/pages/lz-string/index.html y guardarlos en el local storage ??
-                for (var i = 0; i < this.PRELOAD_MAPAS.length; i++){
+                for (var i = 0; i < this.PRELOAD_MAPAS.length; i++) {
                     loader.add("mapa" + this.PRELOAD_MAPAS[i], "mapas/mapa" + this.PRELOAD_MAPAS[i] + ".json");
                 }
             },
@@ -64,14 +64,14 @@ define(['lib/howler', 'lib/pixi'],
                 }
             },
 
-            _onGrhsLoaded: function(){
+            _onGrhsLoaded: function () {
                 this._initGrhsPreload();
             },
 
             preload: function (terminar_callback) {
                 //this._loadSounds();
 
-                if ( (this.PRELOAD_GRHS.length < 1) || (this.PRELOAD_MAPAS.length < 1)){ // no hay nada que cargar
+                if ((this.PRELOAD_GRHS.length < 1) || (this.PRELOAD_MAPAS.length < 1)) { // no hay nada que cargar
                     terminar_callback();
                     return;
                 }
@@ -87,14 +87,14 @@ define(['lib/howler', 'lib/pixi'],
                 });
 
                 loader.load(function (loader, resources) {
-                    self.copiarLoadedAssets(loader.resources,self.assetManager._baseTextures, self.assetManager.dataMapas);
+                    self.copiarLoadedAssets(loader.resources, self.assetManager._baseTextures, self.assetManager.dataMapas);
                     self._onGrhsLoaded();
                     PIXI.loader.reset();
                     terminar_callback();
                 });
             },
 
-            preloadAll: function(terminar_callback){
+            preloadAll: function (terminar_callback) {
                 var maxMapa = 312;
                 for (var i = 1; i <= maxMapa; i++) {
                     this.PRELOAD_MAPAS.push(i);

@@ -1,16 +1,15 @@
-define(['json!../indices/graficos.json',
-        'json!../indices/armas.json',
-        'json!../indices/cabezas.json',
-        'json!../indices/cascos.json',
-        'json!../indices/cuerpos.json',
-        'json!../indices/escudos.json',
-        'json!../indices/fxs.json', 'lib/howler', 'lib/pixi', 'preloader','enums'],
-    function (jsonGraficos, jsonArmas, jsonCabezas, jsonCascos, jsonCuerpos, jsonEscudos, jsonFxs, __howler__, PIXI, Preloader, Enums) {
+define(['json!../../indices/graficos.json',
+        'json!../../indices/armas.json',
+        'json!../../indices/cabezas.json',
+        'json!../../indices/cascos.json',
+        'json!../../indices/cuerpos.json',
+        'json!../../indices/escudos.json',
+        'json!../../indices/fxs.json','lib/pixi', 'assets/preloader','assets/audio', 'enums'],
+    function (jsonGraficos, jsonArmas, jsonCabezas, jsonCascos, jsonCuerpos, jsonEscudos, jsonFxs, PIXI, Preloader,Audio, Enums) {
 
         var AssetManager = Class.extend({
             init: function () {
-                this.currentMusic = null;
-                this.enabled = true;
+                this.audio = new Audio();
 
                 this.indices = jsonGraficos;
                 this.armas = jsonArmas;
@@ -23,8 +22,6 @@ define(['json!../indices/graficos.json',
 
                 this.grhs = [];
                 this.dataMapas = [];
-                this.sounds = [];
-
                 this.preloader = new Preloader(this);
             },
 
@@ -85,103 +82,7 @@ define(['json!../indices/graficos.json',
              return this.mapaActual;
              },*/
 
-            setMusic: function (nombre) { // todo: unload cada vez que cmabia?? <<- ALGO ANDA MAL y SIGUE AUMENTANDO MEMORIA, ver el task manager de chrome
-                /*
-                 if (this.currentMusic)
-                 this.currentMusic.unload();
-                 this.currentMusic = new Howl({
-                 urls: ['audio/musica/' + nombre + '.m4a'],
-                 loop: true
-                 });
-                 if (this.enabled)
-                 this.currentMusic.play();
-                 */
-            },
 
-            playSound: function (nombre, loop, onEnd) { // todo: mover todos los de sonido a una nueva clase de sonido
-                if (this.enabled) {
-                    if (!this.sounds[nombre]) {
-                        this.cargarSonido(nombre,loop,onEnd);
-                    }
-                    this.sounds[nombre].play();
-                }
-            },
-
-            cargarSonido: function (nombre, loop, onEnd) {
-                if (this.sounds[nombre])
-                    return;
-                this.sounds[nombre] = new Howl({
-                    urls: ['audio/sonidos/' + nombre + '.m4a']
-                });
-
-                if (loop)
-                    this.sounds[nombre].loop(loop);
-                if (onEnd)
-                    this.sounds[nombre].on("onend", onEnd);
-            },
-
-            finalizarSonidoLluvia: function (bajoTecho) {
-                this.stopLluvia();
-                var nombre;
-                if (bajoTecho)
-                    nombre = Enums.SONIDOS.lluvia_end_indoor;
-                else
-                    nombre = Enums.SONIDOS.lluvia_end_outdoor;
-                this.playSound(nombre);
-                this.sounds[nombre].volume(0.2);
-            },
-
-            IniciarSonidoLluvia: function (bajoTecho) {
-                var nombre;
-                if (bajoTecho)
-                    nombre = Enums.SONIDOS.lluvia_start_indoor;
-                else
-                    nombre = Enums.SONIDOS.lluvia_start_outdoor;
-                this.playSound(nombre, false, this.playLoopLluvia(bajoTecho));
-                this.sounds[nombre].volume(0.2);
-            },
-
-            playLoopLluvia: function (bajoTecho) {
-                this.stopLluvia();
-                var nombre, sprite;
-                if (bajoTecho) {
-                    nombre = Enums.SONIDOS.lluvia_indoor;
-                    sprite = {lluvia: [130, 7900]};
-                }
-                else {
-                    nombre = Enums.SONIDOS.lluvia_outdoor;
-                    sprite = {lluvia: [100, 4200]};
-                }
-
-                if (!this.sounds[nombre]) { //cargar con sprite para que loopee bien
-                    this.cargarSonido(nombre,true);
-                    this.sounds[nombre].sprite(sprite);
-                    this.sounds[nombre].volume(0.4);
-                }
-                this.sounds[nombre].play("lluvia");
-            },
-
-            stopLluvia: function () {
-                if (this.sounds[Enums.SONIDOS.lluvia_indoor])
-                    this.sounds[Enums.SONIDOS.lluvia_indoor].stop();
-                if (this.sounds[Enums.SONIDOS.lluvia_outdoor])
-                    this.sounds[Enums.SONIDOS.lluvia_outdoor].stop();
-            },
-
-            toggleSound: function () {
-                if (this.enabled) {
-
-                    this.enabled = false;
-                    if (this.currentMusic)
-                        this.currentMusic.pause();
-
-                } else {
-                    this.enabled = true;
-
-                    if (this.currentMusic)
-                        this.currentMusic.play();
-                }
-            },
 
             /*
              $.getJSON('simple.json')
@@ -192,7 +93,7 @@ define(['json!../indices/graficos.json',
              alert("Se produjo algun error cargando la página, probá recargandola");
              });*/
 
-            getMapaSync: function (numMapa) {
+            getMapaSync: function (numMapa) { // TODO: ver de comprimir y guardar todos los mapas en el localstorage
                 if (!this.dataMapas[numMapa]) {
                     var self = this;
                     $.ajax({
