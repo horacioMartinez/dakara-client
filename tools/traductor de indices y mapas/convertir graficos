@@ -1,0 +1,3 @@
+----------------------------- GRAFICOS: ------------------------------------
+
+for i in *.BMP ; do convert "$i" -transparent black "${i%.*}.png" ; done
