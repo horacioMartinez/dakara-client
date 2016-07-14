@@ -80,9 +80,9 @@ for fn in os.listdir('.'):
 	x = 1
 
 
-	# datos extra
-	destino.write("{")
-	destino.write(getExtraData(int(numeroMapa)))
+	# datos extra ###################### desactivado #############################
+	#destino.write("{")
+	#destino.write(getExtraData(int(numeroMapa)))
 
 	# Layers
 	destino.write(",")
