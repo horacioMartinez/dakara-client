@@ -1,5 +1,5 @@
 [INIT]
-NumArmas=77
+NumArmas=76
 
 [Arma1]
 Dir1=4719 'norte
@@ -462,7 +462,7 @@ Dir1=23414
 Dir4=23415
 Dir2=23416
 
-'Mazo del juicio (E/G)
+'Mazo de guerra (E/G)
 [Arma68]
 Dir3=23439
 Dir1=23440
@@ -524,10 +524,3 @@ Dir3=23647
 Dir1=23648
 Dir4=23649
 Dir2=23650
-
-'Martillo de guerra (E/G)
-[Arma77]
-Dir3=23673
-Dir1=23674
-Dir4=23675
-Dir2=23676

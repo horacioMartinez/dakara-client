@@ -6,7 +6,7 @@ from collections import OrderedDict
 origen = open("indices_originales/Graficos.ini", "r")
 destino = open("indices_json/graficos.json","w")
 
-res = [0 for i in range(24210)] # <----------------------------- CAMBIAR, ESTA HARDCODEAD AL MAXIMO <-------------
+res = [0 for i in range(23653)] # <----------------------------- CAMBIAR, ESTA HARDCODEAD AL MAXIMO <-------------
 
 def agregar_grh(numGrh,grafico,offX,offY,width,height):
 	nuevogrh= OrderedDict([('id',numGrh),('grafico',grafico), ('offX',offX), ('offY',offY), ('width',width), ('height',height)])

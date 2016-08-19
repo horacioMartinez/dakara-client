@@ -1,0 +1,7 @@
+----------------------------- GRAFICOS: ------------------------------------
+
+for i in *.BMP ; do convert "$i" -transparent black "${i%.*}.png" ; done
+
+mejor (mientras mayor porcentaje mas disinto de negro se convierte en transparente)
+
+for i in *.BMP ; do convert "$i" -fuzz 2% -transparent black "${i%.*}.png" ; done

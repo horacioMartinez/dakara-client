@@ -41,6 +41,7 @@ for fn in os.listdir('.'):
 
 					grh['offX'] = nuevo_offX
 					grh['offY'] = nuevo_offY
+					grh['css'] = grh['grafico']
 					grh['grafico'] = nuevo_grafico_nombre
 					print (grh_grafico_number)
 
