@@ -1,0 +1,84 @@
+{"frames": {
+
+"8028.png":
+{
+	"frame": {"x":293,"y":217,"w":276,"h":197},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":276,"h":197},
+	"sourceSize": {"w":276,"h":197}
+},
+"8029.png":
+{
+	"frame": {"x":571,"y":140,"w":74,"h":130},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":130},
+	"sourceSize": {"w":74,"h":130}
+},
+"8030.png":
+{
+	"frame": {"x":1,"y":217,"w":290,"h":197},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":197},
+	"sourceSize": {"w":290,"h":197}
+},
+"8031.png":
+{
+	"frame": {"x":1,"y":416,"w":290,"h":69},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":69},
+	"sourceSize": {"w":290,"h":69}
+},
+"8032.png":
+{
+	"frame": {"x":293,"y":416,"w":276,"h":68},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":276,"h":68},
+	"sourceSize": {"w":276,"h":68}
+},
+"8033.png":
+{
+	"frame": {"x":293,"y":1,"w":276,"h":214},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":276,"h":214},
+	"sourceSize": {"w":276,"h":214}
+},
+"8034.png":
+{
+	"frame": {"x":1,"y":1,"w":290,"h":214},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":290,"h":214},
+	"sourceSize": {"w":290,"h":214}
+},
+"8035.png":
+{
+	"frame": {"x":571,"y":1,"w":74,"h":137},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":74,"h":137},
+	"sourceSize": {"w":74,"h":137}
+},
+"8036.png":
+{
+	"frame": {"x":571,"y":272,"w":70,"h":54},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":70,"h":54},
+	"sourceSize": {"w":70,"h":54}
+}},
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "x39.png",
+	"format": "RGBA8888",
+	"size": {"w":646,"h":486},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:6032bb08e22123679f3b3042e1328fef:f906e7172c447af9311932274dcb4fe7:ed7860aba246503dc789331840e01938$"
+}
+}
