@@ -1,0 +1,7 @@
+Dakara protocol generator-js:
+
+modified to output js code.
+
+originally created by AlejoLP
+
+https://github.com/DakaraOnline/dakara-protocol-gen/
