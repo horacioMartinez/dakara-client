@@ -182,7 +182,7 @@ define(['utils/charcodemap', 'ui/game/itemgrid'], function (CharCodeMap, ItemGri
         }
 
         updateNivel(nivel) {
-            $("#indicadorNivel").text("Nivel " + nivel);
+            $("#indicadorNivel").text("Level " + nivel);
         }
 
         setMouseCrosshair(visible) {

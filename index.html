@@ -57,12 +57,12 @@
         <div id="loginBox" class="exterior_border_default background_default horizontal_center">
             <div class="inner_border_default">
                 <div class="form-group">
-                    <input id="loginNombre" class="form-control horizontal_center" type="text" placeholder="Nombre"
+                    <input id="loginNombre" class="form-control horizontal_center" type="text" placeholder="Name"
                            maxlength="15">
                     <input id="loginContrasenia" class="form-control horizontal_center" type="password"
-                           placeholder="Contraseña" maxlength="15">
-                    <button id="botonJugar" class="btn btn-default horizontal_center margenBoton">Jugar</button>
-                    <button id="botonCrearPJ" class="btn btn-primary horizontal_center margenBoton">Crear personaje
+                           placeholder="Password" maxlength="15">
+                    <button id="botonJugar" class="btn btn-default horizontal_center margenBoton">Play</button>
+                    <button id="botonCrearPJ" class="btn btn-primary horizontal_center margenBoton">Create character
                     </button>
                 </div>
             </div>
@@ -82,15 +82,15 @@
                                 <button id="crearBotonGeneroMasculino" class="botonImagen"></button>
                             </div>
                             <div class="form-group">
-                                <label for="crearSelectClase">Clase</label>
+                                <label for="crearSelectClase">Class</label>
                                 <select id="crearSelectClase" class="form-control text-center"></select>
                             </div>
                             <div class="form-group">
-                                <label for="crearSelectRaza">Raza</label>
+                                <label for="crearSelectRaza">Race</label>
                                 <select id="crearSelectRaza" class="form-control text-center"></select>
                             </div>
                             <div class="form-group">
-                                <label for="crearSelectCiudad">Ciudad natal</label>
+                                <label for="crearSelectCiudad">Kingdom</label>
                                 <select id="crearSelectCiudad" class="form-control text-center"></select>
                             </div>
                         </div>
@@ -150,8 +150,8 @@
                 <div class="col-xs-4 col-xs-offset-4">
                     <div class="exterior_border_default background_default horizontal_center"
                          style="display:flex;justify-content:space-around;">
-                        <button id="crearBotonVolver" class="btn btn-default margenBoton"> Volver</button>
-                        <button id="crearBotonCrear" class="btn btn-primary margenBoton">Crear personaje</button>
+                        <button id="crearBotonVolver" class="btn btn-default margenBoton">Return</button>
+                        <button id="crearBotonCrear" class="btn btn-primary margenBoton">Create character</button>
                     </div>
                 </div>
             </div>
@@ -178,7 +178,7 @@
 
             <button id="botonInventario" class="botonNormal"></button>
             <button id="botonHechizos" class="botonNormal"></button>
-            <button id="botonLanzar" class="botonNormal">Lanzar</button>
+            <button id="botonLanzar" class="botonNormal">Cast</button>
             <button id="botonInfo" class="botonNormal">?</button>
             <button id="botonMoverHechizoArriba" class="botonNormal"></button>
             <button id="botonMoverHechizoAbajo" class="botonNormal"></button>
@@ -189,7 +189,7 @@
                     <span id="barraExpTexto"></span>
                 </div>
                 <div id="barraEnergia">
-                    <span id="labelEnergia">ENERGIA</span>
+                    <span id="labelEnergia">ENERGY</span>
                     <div id="barraEnergiaUsada"></div> <!-- Porcentaje usado (en negro) de la barra -->
                     <span id="barraEnergiaTexto"></span>
                 </div>
@@ -199,17 +199,17 @@
                     <span id="barraManaTexto"></span>
                 </div>
                 <div id="barraSalud">
-                    <span id="labelSalud">SALUD</span>
+                    <span id="labelSalud">HEALTH</span>
                     <div id="barraSaludUsada"></div>
                     <span id="barraSaludTexto"></span>
                 </div>
                 <div id="barraHambre">
-                    <span id="labelHambre">HAMBRE</span>
+                    <span id="labelHambre">HUNGER</span>
                     <div id="barraHambreUsada"></div>
                     <span id="barraHambreTexto"></span>
                 </div>
                 <div id="barraSed">
-                    <span id="labelSed">SED</span>
+                    <span id="labelSed">THIRST</span>
                     <div id="barraSedUsada"></div>
                     <span id="barraSedTexto"></span>
                 </div>
@@ -237,17 +237,16 @@
 
 <footer>
     <div id="sharing" class="clickable">
-        Comparti en
+        Share on
         <a href="https://twitter.com/home?status=Estoy%20jugando%20%23DakaraOnline%20un%20servidor%20de%20%23ArgentumOnline%20completamente%20web.%20Jugalo%20en%20web.dakara.com.ar!"
            class="twitter"></a>
         <a href="https://www.facebook.com/DakaraOnline?fref=ts" class="facebook"></a>
     </div>
     <div id="privacy-link" class="clickable">
-        <span class="dash">&ndash;</span> <a class="clickable" target="_blank" href="http://foros.dakaraonline.org/">Reporte
-        de errores</a>
+        <span class="dash">&ndash;</span> <a class="clickable" target="_blank" href="https://github.com/horacioMartinez/dakara-client">Source code</a>
     </div>
     <div id="legal-link" class="clickable">
-        <span class="dash">&ndash;</span> <a class="clickable" target="_blank" href="http://foros.dakaraonline.org/">Foro</a>
+        <span class="dash">&ndash;</span> <a class="clickable" target="_blank" href="http://foros.dakaraonline.org/">Forums</a>
     </div>
     <div id="credits-link" class="clickable">
         <span class="dash">&ndash;</span> <a class="clickable" target="_blank"

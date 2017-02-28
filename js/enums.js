@@ -68,18 +68,18 @@ define({
 
 
     NombreClase: {
-        1: "Mago",
-        2: "Clérigo",
-        3: "Guerrero",
-        4: "Asesino",
-        5: "Ladrón",
-        6: "Bardo",
-        7: "Druida",
-        8: "Bandido",
-        9: "Paladín",
-        10: "Cazador",
-        11: "Trabajador",
-        12: "Pirata"
+        1: "Mage",
+        2: "Cleric",
+        3: "Warrior",
+        4: "Assassin",
+        5: "Thief",
+        6: "Bard",
+        7: "Druid",
+        8: "Bandit",
+        9: "Paladin",
+        10: "Hunter",
+        11: "Worker",
+        12: "Pirate"
     },
 
     Genero: {
@@ -143,12 +143,12 @@ define({
         RECHAZO_ATAQUE_ESCUDO: "¡¡¡Has rechazado el ataque con el escudo!!!",
         USUARIO_RECHAZO_ATAQUE_ESCUDO: "¡¡¡El usuario rechazó el ataque con su escudo!!!",
         FALLADO_GOLPE: "¡¡¡Has fallado el golpe!!!",
-        SEGURO_ACTIVADO: ">>SEGURO ACTIVADO<<",
-        SEGURO_DESACTIVADO: ">>SEGURO DESACTIVADO<<",
+        SEGURO_ACTIVADO: "",
+        SEGURO_DESACTIVADO: "",
         PIERDE_NOBLEZA: "¡¡Has perdido puntaje de nobleza y ganado puntaje de criminalidad!! Si sigues ayudando a criminales te convertirás en uno de ellos y serás perseguido por las tropas de las ciudades.",
         USAR_MEDITANDO: "¡Estás meditando! Debes dejar de meditar para usar objetos.",
-        SEGURO_RESU_ON: "SEGURO DE RESURRECCION ACTIVADO",
-        SEGURO_RESU_OFF: "SEGURO DE RESURRECCION DESACTIVADO",
+        SEGURO_RESU_ON: "",
+        SEGURO_RESU_OFF: "",
         ATAQUE_FALLO: " te atacó y falló!!",
         RECIBE_IMPACTO_CABEZA: " te ha pegado en la cabeza por ",
         RECIBE_IMPACTO_BRAZO_IZQ: " te ha pegado el brazo izquierdo por ",

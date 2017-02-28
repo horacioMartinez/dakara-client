@@ -45,11 +45,11 @@ define(['enums', 'utils/util', 'ui/popups/crearpersonaje'], function (Enums, Uti
 
             id = "crearSelectRaza";
             $sel = $('#' + id);
-            this.modificarSlotInput($sel, id, Enums.Raza.humano, "Humano");
-            this.modificarSlotInput($sel, id, Enums.Raza.elfo, "Elfo");
-            this.modificarSlotInput($sel, id, Enums.Raza.elfoOscuro, "Elfo Oscuro");
-            this.modificarSlotInput($sel, id, Enums.Raza.gnomo, "Gnomo");
-            this.modificarSlotInput($sel, id, Enums.Raza.enano, "Enano");
+            this.modificarSlotInput($sel, id, Enums.Raza.humano, "Human");
+            this.modificarSlotInput($sel, id, Enums.Raza.elfo, "Elf");
+            this.modificarSlotInput($sel, id, Enums.Raza.elfoOscuro, "Dark elf");
+            this.modificarSlotInput($sel, id, Enums.Raza.gnomo, "Gnome");
+            this.modificarSlotInput($sel, id, Enums.Raza.enano, "Dwarf");
             $sel.change(function () {
                 self._updatePJ();
             });
@@ -196,11 +196,11 @@ define(['enums', 'utils/util', 'ui/popups/crearpersonaje'], function (Enums, Uti
         }
 
         updateDados(Fuerza, Agilidad, Inteligencia, Carisma, Constitucion) {
-            $('#crearDadoFuerza').text("Fuerza: " + Fuerza);
-            $('#crearDadoAgilidad').text("Agilidad: " + Agilidad);
-            $('#crearDadoInteligencia').text("Inteligencia: " + Inteligencia);
-            $('#crearDadoCarisma').text("Carisma: " + Carisma);
-            $('#crearDadoConstitucion').text("Constitucion: " + Constitucion);
+            $('#crearDadoFuerza').text("Strength: " + Fuerza);
+            $('#crearDadoAgilidad').text("Agility: " + Agilidad);
+            $('#crearDadoInteligencia').text("Inteligence: " + Inteligencia);
+            $('#crearDadoCarisma').text("Charisma: " + Carisma);
+            $('#crearDadoConstitucion').text("Endurance: " + Constitucion);
         }
 
         getPrimerYUltimaCabezaNum() {

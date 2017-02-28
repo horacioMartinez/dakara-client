@@ -7,7 +7,7 @@ define(['app', 'assets/assetmanager', 'ui/uimanager', 'storage/settings', 'lib/l
         audio.setMusicMuted(settings.getMusicMuted());
         audio.setMusicVolume(settings.getMusicVolume());
         audio.setSoundVolume(settings.getSoundVolume());
-        audio.setMusic("intro");
+        //audio.setMusic("intro");
     }
 
     var initApp = function () {
