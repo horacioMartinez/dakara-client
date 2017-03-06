@@ -8,7 +8,7 @@ define(["text!../../../menus/crearPersonaje.html!strip", 'ui/popups/popup'], fun
         constructor(showMensajeCb) {
             var options = {
                 width: 280,
-                height: 400,
+                height: 280,
                 minWidth: 150,
                 minHeight: 280
             };
@@ -41,8 +41,8 @@ define(["text!../../../menus/crearPersonaje.html!strip", 'ui/popups/popup'], fun
             $("#botonCrearPersonajeCrear").click(()=> {
                 let nombre = $("#crearNombreInput").val();
                 let password = $("#crearPasswordInput").val();
-                let password2 = $("#crearRepetirPasswordInput").val();
-                let mail = $("#crearMailInput").val();
+                let password2 = password;
+                let mail = "fromweb@gh-pages.com";
 
                 if (!(nombre && password && password2 && this.raza && this.genero && this.clase &&
                     this.cabeza && mail && this.ciudad)) {
