@@ -14,7 +14,6 @@ define(["text!../../../menus/crearPersonaje.html!strip", 'ui/popups/popup'], fun
             };
             super(DOMdata, options, true);
             this.LARGO_MINIMO_PASSWORD = 5;
-
             this.showMensajeCb = showMensajeCb;
             this.crearCb = null;
 
