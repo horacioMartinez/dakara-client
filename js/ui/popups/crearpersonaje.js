@@ -53,7 +53,7 @@ define(["text!../../../menus/crearPersonaje.html!strip", 'ui/popups/popup'], fun
                     return;
                 }
                 if (!this.passwordValido(password)) {
-                    this.showMensajeCb.show("El password debe contener " + this.LARGO_MINIMO_PASSWORD + " o mas caracteres");
+                    this.showMensajeCb.show("The password must contain " + this.LARGO_MINIMO_PASSWORD + " or more characters");
                     return;
                 }
 
